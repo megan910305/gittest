@@ -14,7 +14,7 @@ void kmalloc_test( void )
     char *buff;
     unsigned long allocSize;
 	
-	allocSize = 1024;
+	allocSize = 4096;
 
     printk( "kmalloc test\n" );
     
@@ -25,7 +25,7 @@ void kmalloc_test( void )
 
 	if( buff != NULL )
     {
-        sprintf( buff, "test memory: %lu\n", allocSize );
+        sprintf( buff, "kmalloc test memory: %lu\n", allocSize );
         printk( buff );
     
         kfree( buff );
